@@ -1,0 +1,59 @@
+{
+    "manifest_version": 3,
+    "name": "AutoTrader Multi-Make Search",
+    "version": "1.0",
+    "description": "Enhance AutoTrader with the ability to search for multiple car brands simultaneously. Select your preferred car makes and see results from all of them in a single search.",
+    "permissions": [
+        "storage",
+        "scripting",
+        "tabs",
+        "notifications"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "https://www.autotrader.co.uk/*"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon.png",
+            "48": "icon.png",
+            "128": "icon.png"
+        }
+    },
+    "author": "Your Name",
+    "homepage_url": "https://github.com/yourusername/autotrader-multi-make",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.autotrader.co.uk/*"
+            ],
+            "js": [
+                "inject.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "page-inject.js",
+                "privacy.html"
+            ],
+            "matches": [
+                "https://www.autotrader.co.uk/*"
+            ]
+        }
+    ],
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Alt+A",
+                "mac": "Alt+A"
+            },
+            "description": "Open AutoTrader Multi-Make popup"
+        }
+    }
+}

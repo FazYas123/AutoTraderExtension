@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AutoTrader Multi-Make</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 16px;
+      width: 320px;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    #makesList {
+      max-height: 220px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #fff;
+      padding: 8px;
+      margin-bottom: 12px;
+    }
+
+    #makesList label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+      padding: 4px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+    #makesList label:hover {
+      background: #f0f0f0;
+    }
+
+    #makesList input[type="checkbox"] {
+      margin-right: 8px;
+      transform: scale(1.1);
+    }
+
+    button {
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #clearBtn {
+      background-color: #dc3545;
+    }
+
+    #clearBtn:hover {
+      background-color: #a71d2a;
+    }
+
+    #status {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: green;
+    }
+
+    #selectedMakesDisplay {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h3>Select Car Makes</h3>
+  <input type="text" id="searchInput" placeholder="Search makes...">
+  <div id="makesList"></div>
+
+  <div>
+    <button id="saveBtn">Save</button>
+    <button id="clearBtn">Clear</button>
+  </div>
+
+  <p id="status"></p>
+  <div id="selectedMakesDisplay">Selected: None</div>
+  
+  <div id="warningMsg" style="margin-top: 10px; padding: 8px; background-color: #fff3cd; border: 1px solid #ffeeba; border-radius: 4px; color: #856404; font-size: 0.9em; display: none;">
+    Remember to click "Clear" before using AutoTrader's native make or model filters to avoid conflicts.
+  </div>
+
+  <div style="margin-top: 16px; padding-top: 8px; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; font-size: 0.8em;">
+    <div>
+      <span style="color: #666;">Tip: Press Alt+A to open this popup</span>
+    </div>
+    <div>
+      <a id="privacyLink" href="#" style="color: #007bff; text-decoration: none;">Privacy Policy</a>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
