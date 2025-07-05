@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "AutoTrader Multi-Make Search",
     "version": "1.0",
-    "description": "Enhance AutoTrader with the ability to search for multiple car brands simultaneously. Select your preferred car makes and see results from all of them in a single search.",
+    "description": "Enhance AutoTrader with the ability to search for multiple car brands simultaneously.",
     "permissions": [
         "storage",
         "scripting",
@@ -23,8 +23,8 @@
             "128": "icon.png"
         }
     },
-    "author": "Your Name",
-    "homepage_url": "https://github.com/yourusername/autotrader-multi-make",
+    "author": "Yasin Fazley",
+    "homepage_url": "https://github.com/FazYas123/AutoTraderExtension",
     "content_scripts": [
         {
             "matches": [
