@@ -24,14 +24,6 @@ This extension allows you to:
 
 This extension intercepts and modifies the search API requests that AutoTrader makes to its backend. When you select multiple makes in the extension popup, those selections are injected into AutoTrader's search queries, enabling you to see results from all selected brands in a single search view.
 
-## Installation
-
-1. Download or clone this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer Mode" in the top right
-4. Click "Load Unpacked" and select the extension folder
-5. The extension icon should appear in your toolbar
-
 ## Usage
 
 ### Setting Up Your Multi-Make Search
