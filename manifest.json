@@ -5,7 +5,6 @@
     "description": "Enhance AutoTrader with the ability to search for multiple car brands simultaneously.",
     "permissions": [
         "storage",
-        "scripting",
         "tabs",
         "notifications"
     ],
